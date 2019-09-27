@@ -13,7 +13,7 @@
 Segundo a [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
 90% dos dados que existem hoje foram gerados durante os últimos dois anos.
 A cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem
-precedentes. Uma grande cifra de dados necessita ser organizada e disponibilizada ao usuário de forma que possa ser ordenada e filtrada conforme a necessidade de busca de cada um, desta forma o projeto data lovers é essencial para acompanhar essa nova realidade.
+precedentes. Uma grande cifra de dados necessita ser organizada e disponibilizada ao usuário de forma que possa ser ordenada e filtrada conforme a necessidade de busca de cada um, desta forma, o projeto data lovers é essencial para acompanhar essa nova realidade.
 
 ## 2. Escolha do tema
 Da necessidade de tratar um alto contigente de dados e converte-los em informações úteis, ordenadas e que possibilitem preciso acesso ao usuário atendendo os critérios de sua busca, optamos pelo Banco de dados do World Bank, com uma vasta quantidade de informações que quando organizadas retornam dados importantes sobre o desenvolvimento dos países Brasil, Chile, Peru e México. 
