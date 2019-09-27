@@ -4,7 +4,6 @@ selectPais.addEventListener("change", () => {
   countryDatas();
 });
 
-const getData = document.getElementById("select-dados");
 const getYears = document.getElementById("select-ano");
 getData.addEventListener("change", () => {
   const indicators = WORLDBANK[selectPais.value].indicators;
@@ -12,17 +11,9 @@ getData.addEventListener("change", () => {
   popularAno(data[0].data);
 });
 
-const button = document.getElementById("btn-ver");
-const result = document.getElementById("result");
-const reduce = document.getElementById("reduce");
+  
+  const indicatorFilter = indicators1.filter(elem => elem.indicatorName === getData.value ? elem.data : null);
 
-button.addEventListener("click", (e) => {
-  e.preventDefault();
-  const countryValue1 = selectPais.value;
-  const indicators1 = WORLDBANK[countryValue1].indicators;
-  const dataFiltrado = filterDatas(indicators1, getData.value);// filterDatas(indicators1, getData.value, getYears.value);
-
-  // console.log(dataFiltrado[0].data.filter())
   dataFiltrado.map(item => {    
     if (item.data[getYears.value] === "") {
       result.innerHTML = "Não tem dados!";
@@ -30,7 +21,6 @@ button.addEventListener("click", (e) => {
       result.innerHTML = `Esse é o resultado ${parseInt(item.data[getYears.value])}%`;
     }
   });
-
   const years = WORLDBANK[countryValue1].indicators[0].data; 
   //console.log(years);
   // const filteredYears = Object.keys(years).filter( year => years[year] !== "");  
@@ -49,13 +39,6 @@ button.addEventListener("click", (e) => {
   //reduce.innerHTML = `Média por anos disponíveis ${parseInt((soma / filteredYears.length))}%`
   //CORRIGIR A DIVISÃO
   //console.log(soma / filteredYears.length)
-});
-
-function countryDatas() {
-  getData.innerHTML = "";
-  
-  const countryValue = selectPais.value;
-  const indicators = WORLDBANK[countryValue].indicators;
 
   indicators.map((elem) => {
     getData.innerHTML += `<option>${elem.indicatorName}</option>`;
@@ -68,8 +51,6 @@ function countryDatas() {
   //     getYears.innerHTML += `<option>${item}</option>`; 
   //   }
   // }
-
-}
 
 function popularAno(years) {
   getYears.innerHTML = "";
