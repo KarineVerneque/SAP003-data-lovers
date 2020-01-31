@@ -1,9 +1,7 @@
 body,
 html {
   margin: 0;
-  /*
-    border: 5px solid yellow;
-    */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 16px;
   color: black;
   height: 100%;
@@ -11,8 +9,13 @@ html {
 
 header {
   background: #0093DD;
-  height: 130px;
+  height: auto;
   color: white;
+}
+
+.headerDiv {
+  border: 3px solid greenyellow;
+  margin: auto 15%;
 }
 
 h1 {
@@ -48,6 +51,10 @@ footer {
   color: white;
   padding: 5px;
   text-align: center;
+}
+
+.h1-header {
+  margin: 0 auto -15px;
 }
 
 .mainselection select {
