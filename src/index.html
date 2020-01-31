@@ -12,14 +12,16 @@
 <body>
   <main>
     <header>
-      <h1>Nossa missão</h1>
-      <h3>Buscador de índices de desenvolvimento escolar, econômico e social.</h3>
-    </header>
+      <div class="headerDiv">
+        <h1 class="h1-header">Nossa missão</h1>
+        <h3>Buscador de índices de desenvolvimento escolar, econômico e social.</h3>
+      </div>
+      </header>
     <section>
       <span class="triangle"></span>
     </section>
     <section class="selects">
-      <form class="heading">
+      <form class="dataForm">
         <h4>selecione aqui o país, dado e o ano desejado</h4>
         <section class="mainselection">
           <select class="select-country">
@@ -50,8 +52,7 @@
   <footer>“Copyright &copy 2019 | Data Lovers“</footer>
   <div id="root"></div>
   <script src="data/worldbank/worldbank.js"></script>
-  <script src="data.js"></script>
-  <script src="main.js"></script>
+  <script src="main.js" type="module"></script>
 </body>
 
 </html>
