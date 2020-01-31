@@ -79,7 +79,7 @@ footer {
   margin: auto auto;
 }
 
-#btn-see {
+.btn-see {
   display: inline-block;
   cursor: pointer;
   padding: 8px 15px;
@@ -97,20 +97,20 @@ footer {
   text-align: center;
 }
 
-#btn-see:hover {
+.btn-see:hover {
   background: #1A21A6;
 }
 
-#btn-see:active {
+.btn-see:active {
   background: #1C59BF;
 }
 
-#year-result {
+.year-result {
   font-size: 0.8em;
   color: rgba(100, 154, 46, 1);
 }
 
-#average-result {
+.average-result {
   font-size: 0.8em;
   color: rgba(8, 8, 138, 1);
 }
