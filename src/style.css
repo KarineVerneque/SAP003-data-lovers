@@ -2,15 +2,15 @@ body,
 html {
   margin: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 16px;
-  color: black;
   height: 100%;
+  background-color: #f1f1ee;
+  width: 100%;
 }
 
 header {
-  background: #0093DD;
+  background: #00062A;
   height: auto;
-  color: white;
+  color: #fff;
 }
 
 .headerDiv {
@@ -21,40 +21,55 @@ header {
 h1 {
   margin: 0;
   text-align: center;
-  font-family: 'Roboto Slab', serif;
+  /* font-family: 'Roboto Slab', serif; */
   letter-spacing: 5px;
   font-size: 3em;
 }
 
 h3 {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.4em;
   letter-spacing: 3px;
 }
 
 h4 {
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.4em;
+  color: #00062A;
+}
+
+.span-font {
+  text-align: center;
+  font-size: 1.8em;
+  color: #00062A;
+  font-weight: bold;
 }
 
 .triangle {
   width: 0px;
   border-left: 45px solid transparent;
   border-right: 45px solid transparent;
-  border-top: 30px solid #0093DD;
+  border-top: 30px solid #00062A;
   display: flex;
   margin: auto;
 }
 
 footer {
-  background: #0093DD;
+  background: #00062A;
   color: white;
-  padding: 5px;
+  padding: 4px;
   text-align: center;
+  position: fixed;
+  bottom:0;
+  width:99.2%;
 }
 
 .h1-header {
   margin: 0 auto -15px;
+}
+
+.selects {
+  margin-top: -25px;
 }
 
 .select-section select {
@@ -62,21 +77,26 @@ footer {
   color: white;
   background: transparent;
   font-size: 20px;
-  padding: 2px 10px;
+  padding: 8px 15px;
   width: 100%;
-  /*width: 378px;*/
-  background: #1C59BF;
+  background: rgb(26, 69, 143);
+  border-radius: 8px;
 }
 
+option:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
+
 .select-section {
-  margin: 48px auto;
+  margin: 25px auto;
   width: 60%;
-  background: #1C59BF;
 }
 
 .graphic {
   width: 40%;
-  margin: auto auto;
+  margin: 10px auto;
 }
 
 .btn-result {
@@ -87,9 +107,10 @@ footer {
   text-align: center;
   color: white;
   font-size: 20px;
-  background-color: #1C59BF;
+  background-color: #00062A;
   outline: none;
-  border: none;
+  border: 2px solidd #fff;
+  border-radius: 8px;
   font-style: bold;
 }
 
@@ -98,11 +119,7 @@ footer {
 }
 
 .btn-result:hover {
-  background: #1A21A6;
-}
-
-.btn-result:active {
-  background: #1C59BF;
+  background: rgb(18, 22, 88);
 }
 
 .year-result {
