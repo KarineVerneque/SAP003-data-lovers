@@ -29,17 +29,17 @@ resultBbutton.addEventListener("click", (e) => {
   dataFiltrado.map(item => item.data[getYears.value] === "" ?
     yearResult.innerHTML = "Não tem dados!" :
     yearResult.innerHTML = `
-      <h4>
+      <p>
         Média anual ${parseInt(item.data[getYears.value])}%
-      </h4>
+      </p>
     `
   );
   const years = indicatorFilter[0].data;
   const dataOfYear = dataFiltrado[0].data[getYears.value];  
   averageResult.innerHTML = `
-    <h4>
+    <p>
       Média por anos apurados ${parseInt(dataAverage(years))}%
-    </h4>
+    </p>
   `;
   const avgYears = parseInt(dataAverage(years));
   graphic(dataOfYear, avgYears);
