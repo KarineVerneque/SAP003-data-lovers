@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <title>Data Lovers</title>
@@ -8,7 +7,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
 </head>
-
 <body>
   <main>
     <header>
@@ -21,9 +19,9 @@
       <span class="triangle"></span>
     </section>
     <section class="selects">
-      <form class="dataForm">
+      <form>
         <h4>selecione aqui o país, dado e o ano desejado</h4>
-        <section class="mainselection">
+        <section class="select-section">
           <select class="select-country">
             <option value="" disabled="" selected="">Selecione o país</option>
             <option class="peru" value="PER">Peru</option>
@@ -32,14 +30,14 @@
             <option class="chile" value="CHL">Chile</option>
           </select>
         </section>
-        <section class="mainselection">
+        <section class="select-section">
           <select class="select-data"></select>
         </section>
-        <section class="mainselection">
-          <select class="select-ano"></select>
+        <section class="select-section">
+          <select class="select-year"></select>
         </section>
         <section class="btn-submit">
-          <input class="btn-see" type="submit" />
+          <input class="btn-result" type="submit" value="Resultado"/>
         </section>
       </form>
     </section>
@@ -54,5 +52,4 @@
   <script src="data/worldbank/worldbank.js"></script>
   <script src="main.js" type="module"></script>
 </body>
-
 </html>
