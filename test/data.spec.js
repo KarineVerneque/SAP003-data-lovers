@@ -8,19 +8,19 @@ describe("filterDatas", () => {
     expect(filterDatas(
       [
         {
-          indicatorName: "gatinho"
+          indicatorName: "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)"
         },
         {
-          indicatorName: "xuxu"
+          indicatorName: "Fuerza laboral con educación intermedia (% del total)"
         },
         {
-          indicatorName: "banana"
+          indicatorName: "Fuerza laboral con educación intermedia, varones (% de la fuerza laboral masculina)"
         }
       ]
-      , "gatinho")).toEqual(
+      , "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)")).toEqual(
       [
         {
-          indicatorName: "gatinho"
+          indicatorName: "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)"
         }
       ]
     );
@@ -33,7 +33,21 @@ describe("sortData", () => {
   });
 
   it("returns `sortData`", () => {
-    expect(sortData([{"indicatorName": "Xuxa"}, {"indicatorName": "Banana"}, {"indicatorName": "Peixinho"}, {"indicatorName": "Palomita"}])).toEqual([{"indicatorName": "Banana"}, {"indicatorName": "Palomita"}, {"indicatorName": "Peixinho"}, {"indicatorName": "Xuxa"}]);
+    expect(sortData(
+      [
+        {"indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años) (estimación nacional)"},
+        {"indicatorName": "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)"},
+        {"indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)"},
+        {"indicatorName": "Fuerza laboral con educación intermedia, mujeres (% de la fuerza laboral femenina)"}
+      ]
+    )).toEqual(
+      [
+        {"indicatorName": "Empleo de tiempo parcial, mujeres (% del total de mujeres empleadas)"},
+        {"indicatorName": "Fuerza laboral con educación intermedia, mujeres (% de la fuerza laboral femenina)"},
+        {"indicatorName": "Proporcin de tasas de participacin laboral femenina y masculina (%) (estimación modelado OIT)"},
+        {"indicatorName": "Tasa de participación en la fuerza laboral, total (% de la población total mayor de 15 años) (estimación nacional)"}
+      ]
+    );
   });
 });
 
@@ -43,6 +57,14 @@ describe("dataAverage", () => {
   });
 
   it("Média", () => {
-    expect(dataAverage({"2002": 31.4799995422363, "2003": 29.6299991607666, "2004": 27.6299991607666})).toEqual(29.57999928792317);
+    expect(dataAverage(
+      {
+        "2002": 31.4799995422363,
+        "2003": 29.6299991607666,
+        "2004": 27.6299991607666
+      }
+    )).toEqual(
+      29.57999928792317
+    );
   });
 });

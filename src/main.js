@@ -1,27 +1,27 @@
 import { filterDatas, dataAverage, sortData } from "./data.js";
 import graphic from "./chart.js";
 
-const selectPais = document.querySelector(".select-country");
+const selectCountry = document.querySelector(".select-country");
 const getData = document.querySelector(".select-data");
 const resultBbutton = document.querySelector(".btn-result");
 const getYears = document.querySelector(".select-year");
 const yearResult = document.querySelector(".year-result");
 const averageResult = document.querySelector(".average-result");
 
-selectPais.addEventListener("change", () => {
-  sortData(WORLDBANK[selectPais.value].indicators);
+selectCountry.addEventListener("change", () => {
+  sortData(WORLDBANK[selectCountry.value].indicators);
   countryDatas();
 });
 
 getData.addEventListener("change", () => {
-  const indicators = WORLDBANK[selectPais.value].indicators;
+  const indicators = WORLDBANK[selectCountry.value].indicators;
   const dataFilter = indicators.filter(elem => elem.indicatorName === getData.value ? elem.data : null);
   inputYear(dataFilter[0].data);
 });
 
 resultBbutton.addEventListener("click", (e) => {
   e.preventDefault();
-  const countryValue = selectPais.value;
+  const countryValue = selectCountry.value;
   const indicators = WORLDBANK[countryValue].indicators;
   const dataFiltrado = filterDatas(indicators, getData.value);
   const indicatorFilter = indicators.filter(elem => elem.indicatorName === getData.value ? elem.data : null);
@@ -51,7 +51,7 @@ const countryDatas = () => {
       Selecione um dado indicador
     </option>
   `;
-  const countryValue = selectPais.value;
+  const countryValue = selectCountry.value;
   const indicators = WORLDBANK[countryValue].indicators;
   indicators.map((elem) => {
     getData.innerHTML += `
