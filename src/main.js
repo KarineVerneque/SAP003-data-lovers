@@ -1,12 +1,12 @@
 import { filterDatas, dataAverage, sortData } from "./data.js";
-import graphic from "./chart.js"
+import graphic from "./chart.js";
 
-const selectPais = document.getElementById("select-country");
-const getData = document.getElementById("select-dados");
-const button = document.getElementById("btn-see");
-const getYears = document.getElementById("select-ano");
-const yearResult = document.getElementById("year-result");
-const averageResult = document.getElementById("average-result");
+const selectPais = document.querySelector(".select-country");
+const getData = document.querySelector(".select-data");
+const resultBbutton = document.querySelector(".btn-result");
+const getYears = document.querySelector(".select-year");
+const yearResult = document.querySelector(".year-result");
+const averageResult = document.querySelector(".average-result");
 
 selectPais.addEventListener("change", () => {
   sortData(WORLDBANK[selectPais.value].indicators);
@@ -19,7 +19,7 @@ getData.addEventListener("change", () => {
   inputYear(dataFilter[0].data);
 });
 
-button.addEventListener("click", (e) => {
+resultBbutton.addEventListener("click", (e) => {
   e.preventDefault();
   const countryValue = selectPais.value;
   const indicators = WORLDBANK[countryValue].indicators;
@@ -60,7 +60,7 @@ const countryDatas = () => {
       </option>
     `;
   });
-}
+};
 
 const inputYear = (years) => {
   getYears.innerHTML = `
@@ -75,4 +75,4 @@ const inputYear = (years) => {
         ${elem[0]}
       </option>`;
   });
-}
+};

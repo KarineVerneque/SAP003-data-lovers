@@ -14,7 +14,7 @@ header {
 }
 
 .headerDiv {
-  border: 3px solid greenyellow;
+  border: 3px solid transparent;
   margin: auto 15%;
 }
 
@@ -57,7 +57,7 @@ footer {
   margin: 0 auto -15px;
 }
 
-.mainselection select {
+.select-section select {
   border: 0;
   color: white;
   background: transparent;
@@ -68,7 +68,7 @@ footer {
   background: #1C59BF;
 }
 
-.mainselection {
+.select-section {
   margin: 48px auto;
   width: 60%;
   background: #1C59BF;
@@ -79,7 +79,7 @@ footer {
   margin: auto auto;
 }
 
-.btn-see {
+.btn-result {
   display: inline-block;
   cursor: pointer;
   padding: 8px 15px;
@@ -97,11 +97,11 @@ footer {
   text-align: center;
 }
 
-.btn-see:hover {
+.btn-result:hover {
   background: #1A21A6;
 }
 
-.btn-see:active {
+.btn-result:active {
   background: #1C59BF;
 }
 

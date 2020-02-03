@@ -3,7 +3,8 @@
       "browser": true
     },
     "parserOptions": {
-      "ecmaVersion": 6
+      "ecmaVersion": 6,
+      "sourceType": "module"
     },
     "globals": {
       "cipher": false
@@ -18,6 +19,6 @@
       "space-before-blocks": ["error", "always"],
       "key-spacing": ["error", { "afterColon": true }],
       "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
-      "no-multiple-empty-lines": ["error", { "max": 1 }],
+      "no-multiple-empty-lines": ["error", { "max": 1 }]
     }
   }
